@@ -65,9 +65,9 @@ void create_ini(char *fn) {
    fprintf(f, "ports      = 4201\n");
    fprintf(f, "sslports   = 5201\n");
    fprintf(f, "macrosfile = muf\\macros\n");
-   fprintf(f, "dbinfile   = data\\minimal.db\n");
-   fprintf(f, "dboutfile  = data\\minimal.out\n");
-   fprintf(f, "dboldfile  = data\\minimal.old\n");
+   fprintf(f, "dbinfile   = dbs\\minimal\\data\\minimal.db\n");
+   fprintf(f, "dboutfile  = dbs\\minimal\\data\\minimal.out\n");
+   fprintf(f, "dboldfile  = dbs\\minimal\\data\\minimal.old\n");
    fprintf(f, "deltasfile = data\\deltas-file\n");
    fprintf(f, "server     = fbmuck\n");
    fprintf(f, "wizonly    = false\n");
@@ -90,9 +90,9 @@ mucklist * newmucklist(const char *name, mucklist *m) {
    nm->sslports[0]   = 5201;
    nm->sslportcount  = 1;
    nm->macrosfile    = strdup("muf\\macros");
-   nm->dbinfile      = strdup("data\\minimal.db");
-   nm->dboutfile     = strdup("data\\minimal.out");
-   nm->dboldfile     = strdup("data\\minimal.old");
+   nm->dbinfile      = strdup("dbs\\minimal\\data\\minimal.db\n");
+   nm->dboutfile     = strdup("dbs\\minimal\\data\\minimal.out");
+   nm->dboldfile     = strdup("dbs\\minimal\\data\\minimal.old");
    nm->deltasfile    = strdup("data\\deltas-file");
    nm->server        = strdup("fbmuck");
    nm->next          = m;
